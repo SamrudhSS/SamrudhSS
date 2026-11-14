@@ -1,0 +1,38 @@
+name: GitHub-Profile-3D-Contrib
+
+# Builds the 3D contribution city used in README.md.
+# Generates profile-3d-contrib/profile-night-green.svg (dark)
+# and profile-3d-contrib/profile-green-animate.svg (light),
+# then pushes them to the output-3d-contrib branch.
+# Run it once manually after pushing, or the city shows a broken image.
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-github-profile-3d-contrib:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate 3D contrib
+        uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: SamrudhSS
+
+      - name: Push SVGs to output-3d-contrib branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output-3d-contrib
+          build_dir: profile-3d-contrib
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

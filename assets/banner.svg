@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Samrudh Sangalad — Agentic AI Engineer, neon console">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A0F08"/>
+      <stop offset="55%" stop-color="#0F1A0B"/>
+      <stop offset="100%" stop-color="#1A2B1A"/>
+    </linearGradient>
+    <linearGradient id="lime" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#CAFF3C"/>
+      <stop offset="100%" stop-color="#8AFF57"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="360" fill="url(#bg)"/>
+  <!-- terminal frame -->
+  <rect x="28" y="24" width="1144" height="312" rx="14" fill="none" stroke="#CAFF3C" stroke-opacity="0.55" stroke-width="1.5"/>
+  <g>
+    <circle cx="62" cy="52" r="7" fill="#FF5F56"/>
+    <circle cx="88" cy="52" r="7" fill="#FFBD2E"/>
+    <circle cx="114" cy="52" r="7" fill="#27C93F"/>
+  </g>
+  <text x="140" y="58" font-family="monospace" font-size="15" fill="#8AFF57">samrudh@agent:~</text>
+  <text x="1020" y="58" font-family="monospace" font-size="14" fill="#E8F5E1" opacity="0.7">● LIVE</text>
+
+  <!-- grid, 40px slices -->
+  <g stroke="#CAFF3C" stroke-opacity="0.07">
+    <path d="M28 120H1172M28 200H1172M28 280H1172M268 24V336M508 24V336M748 24V336M988 24V336"/>
+  </g>
+
+  <!-- scanline -->
+  <rect x="28" y="90" width="1144" height="3" fill="#CAFF3C" opacity="0.35">
+    <animate attributeName="y" values="90;320;90" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.1;0.4;0.1" dur="6s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- neural network, right side -->
+  <g stroke="#CAFF3C" stroke-opacity="0.4" stroke-width="1.2">
+    <line x1="880" y1="110" x2="1010" y2="160"><animate attributeName="stroke-opacity" values="0.1;0.6;0.1" dur="3s" repeatCount="indefinite"/></line>
+    <line x1="1010" y1="160" x2="930" y2="250"><animate attributeName="stroke-opacity" values="0.6;0.1;0.6" dur="3s" repeatCount="indefinite"/></line>
+    <line x1="930" y1="250" x2="1080" y2="280"><animate attributeName="stroke-opacity" values="0.1;0.6;0.1" dur="4s" repeatCount="indefinite"/></line>
+    <line x1="880" y1="110" x2="1080" y2="280"><animate attributeName="stroke-opacity" values="0.2;0.1;0.4" dur="5s" repeatCount="indefinite"/></line>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="880" cy="110" r="7" fill="#CAFF3C"><animate attributeName="r" values="5;9;5" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="1010" cy="160" r="9" fill="#8AFF57"><animate attributeName="r" values="7;11;7" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="930" cy="250" r="6" fill="#CAFF3C"><animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/></circle>
+    <circle cx="1080" cy="280" r="8" fill="#8AFF57"><animate attributeName="r" values="6;10;6" dur="3.6s" repeatCount="indefinite"/></circle>
+  </g>
+  <circle r="4" fill="#ffffff">
+    <animateMotion dur="4s" repeatCount="indefinite" path="M880 110 L1010 160 L930 250 L1080 280"/>
+  </circle>
+
+  <text x="62" y="112" font-family="monospace" font-size="17" fill="#8AFF57">$ whoami</text>
+  <text x="62" y="168" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="url(#lime)">SAMRUDH</text>
+  <text x="62" y="226" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="800" fill="url(#lime)">SANGALAD</text>
+  <text x="62" y="262" font-family="monospace" font-size="19" fill="#E8F5E1">&gt; Agentic AI Engineer — agents that perceive,</text>
+  <text x="62" y="290" font-family="monospace" font-size="19" fill="#E8F5E1">  reason, decide, and act.</text>
+  <text x="62" y="320" font-family="monospace" font-size="16" fill="#CAFF3C">$ run_agent --mode autonomous
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
+  </text>
+</svg>
